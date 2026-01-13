@@ -1,0 +1,32 @@
+/* Root Styles */
+
+html {
+    font-size: 100%;
+}
+
+body {
+    background-color: hsl(220, 20%, 97%);
+    color: hsl(220, 15%, 15%);
+}
+
+/* Hero Styles */
+
+.hero {
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url('../images/hero-background.jpg');
+    background-repeat: repeat;
+    background-size: 400px auto;
+    background-position: top left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px); /* efeito vidro */
+    padding: clamp(24px, 5vw, 64px);
+    border-radius: clamp(16px, 3vw, 28px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
