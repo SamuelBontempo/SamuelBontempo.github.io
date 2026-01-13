@@ -55,8 +55,4 @@ You will find my contact information and social links directly on the website.
 
 ---
 
-<<<<<<< HEAD
 ⭐ Feel free to explore the project and follow my journey.
-=======
-⭐ Feel free to explore the project and follow my journey.
->>>>>>> 9ed2aeb9e98531e63cefef4982353d66da860b45

@@ -52,6 +52,37 @@ body {
     gap: 1rem;
 }
 
+/* Projects Styles */
+
+.projects {
+    padding: clamp(1rem, 4vw, 4rem);
+    width: 100%;
+}
+
+.projects-content {
+    width: 100%;
+    min-height: clamp(380px, 60vh, 600px);
+    background-color: hsl(220, 20%, 88%);
+    border-radius: clamp(16px, 3vw, 32px);
+    padding: clamp(1rem, 3vw, 2.5rem);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.projects-title {
+    text-align: center;
+    width: clamp(200px, 40%, 400px); 
+    margin: 0 auto;
+    background-color: var(--main-color);
+    
+    border-radius: clamp(20px, 10vw, 50px);
+    
+    padding: clamp(0.75rem, 2vw, 1.5rem);
+    font-size: clamp(1.25rem, 2vw, 2rem);
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+
 /* Button Styles */
 
 .button {
