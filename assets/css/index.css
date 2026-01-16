@@ -3,10 +3,12 @@
 ========================= */
 
 :root {
-  --main-color: hsl(220, 20%, 97%);
+  --primary-color: hsl(220, 20%, 97%);
   --secondary-color: hsl(220, 15%, 15%);
-}
 
+  /* Subtitle detail color */
+  --tertiary-color: hsl(220, 12%, 45%);
+}
 
 /* =========================
    Root Styles
@@ -17,7 +19,7 @@ html {
 }
 
 body {
-  background-color: var(--main-color);
+  background-color: var(--primary-color);
   color: var(--secondary-color);
 }
 
@@ -74,7 +76,7 @@ body {
 .aboutme {
   background:
     linear-gradient(
-      hsla(220, 15%, 15%, 0.85),
+      hsla(220, 15%, 15%, 0.8),
       hsla(220, 15%, 15%, 1)
     ),
     url('../images/aboutme-background.jpg');
@@ -105,6 +107,9 @@ body {
   padding: 3rem;
 }
 
+.aboutme-content span {
+  color: var(--tertiary-color);
+}
 
 /* =========================
    About Me — Text
@@ -247,11 +252,129 @@ body {
   z-index: -1;
 }
 
+/* =========================
+   Projects Section
+========================= */
+
+.projects {
+  background-color: var(--secondary-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 6rem 0;
+}
+
+/* Outer patterned container — always full width */
+.projects-row {
+  width: 100%;
+
+  background-image: url('../images/hero-background.jpg');
+  background-repeat: repeat;
+  background-size: 400px auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 3rem 0;
+}
+
+/* Main content box */
+.projects-content {
+  width: 90%;
+  max-width: 1200px;
+
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+
+  border-radius: 16px;
+  padding: 3rem;
+
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.35),
+    0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Section header */
+.projects-header {
+  width: 100%;
+  text-align: center;
+  
+  border-bottom: 1px solid #fff;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+
+  margin-bottom: 3rem;
+  padding-bottom: 0.25rem;
+}
+
+.projects-header h2 {
+  margin-bottom: 0.5rem;
+}
+
+.projects-header span {
+  color: var(--tertiary-color);
+  font-size: 0.95rem;
+}
+
+/* Projects grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Project card */
+.project-card {
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: 14px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Project image */
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Project text content */
+.project-content {
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.project-content h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.project-content p {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: hsl(220, 10%, 75%);
+}
 
 /* =========================
    Responsive
 ========================= */
 
+/* (Código do aboutme mantido como você pediu) */
 @media (max-width: 768px) {
   .aboutme-content {
     grid-template-columns: 1fr;
@@ -264,6 +387,27 @@ body {
   }
 
   .aboutme-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Projects mobile */
+@media (max-width: 768px) {
+  .projects {
+    padding: 4rem 0;
+  }
+
+  .projects-row {
+    padding: 2rem 0;
+  }
+
+  .projects-content {
+    width: 92%;
+    padding: 2rem;
+    border-radius: 14px;
+  }
+
+  .projects-grid {
     grid-template-columns: 1fr;
   }
 }
