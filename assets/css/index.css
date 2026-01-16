@@ -388,7 +388,7 @@ body {
     ),
     url('../images/aboutme-background.jpg');
   ;
-  
+
   background-repeat: repeat;
   background-size: 600px auto;
 
@@ -571,6 +571,7 @@ body {
 /* Patterns */
 .hero,
 .aboutme,
-.projects-row {
+.projects-row,
+.contact {
   background-attachment: scroll;
 }
