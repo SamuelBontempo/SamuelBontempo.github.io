@@ -1,0 +1,579 @@
+/* =========================
+   CSS Variables
+========================= */
+
+:root {
+    /* Paleta vintage black */
+    --color-black: #0f0f0f;
+    --color-black-soft: #161616;
+    --color-white: #f5f3ef;
+    --color-gray: #b1ada6;
+    --color-gold: #c2a45d;
+
+    /* Typography */
+    --font-primary: 'Playfair Display', serif;
+    --font-secondary: 'Inter', sans-serif;
+
+    /* Layout */
+    --header-height: 80px;
+    --container-width: 1200px;
+}
+
+/* =========================
+   Root Styles
+========================= */
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: var(--font-secondary);
+    background-color: var(--color-black);
+    color: var(--color-white);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden; /* evita scroll horizontal acidental */
+}
+
+/* =========================
+   Header Styles
+========================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: var(--header-height);
+    background-color: var(--color-black-soft);
+    border-bottom: 1px solid rgba(194, 164, 93, 0.15);
+}
+
+.header-container {
+    max-width: var(--container-width);
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+
+.logo {
+    font-family: var(--font-primary);
+    font-size: 1.6rem;
+    letter-spacing: 0.04em;
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--color-gold);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* Navigation */
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-list a {
+    font-size: 0.9rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-gray);
+    text-decoration: none;
+
+    padding: 0.6rem 0.9rem; /* ↑ área clicável real */
+    border-radius: 6px;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.nav-list a:hover {
+    color: var(--color-white);
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+/* CTA */
+
+.nav-cta {
+    padding: 0.65rem 1.6rem;
+    border: 1px solid var(--color-gold);
+    border-radius: 6px;
+
+    color: var(--color-gold);
+    background-color: transparent;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.nav-list .nav-cta:hover {
+    background-color: var(--color-gold);
+    color: var(--color-black);
+}
+
+/* =========================
+   Hero Styles
+========================= */
+
+.hero {
+    width: 100%;
+    min-height: calc(100vh - var(--header-height));
+    padding-top: var(--header-height);
+
+    background:
+        linear-gradient(
+            rgba(15, 15, 15, 0.85),
+            rgba(15, 15, 15, 0.85)
+        ),
+        url('../barber_images/hero.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hero Content */
+
+.hero-content {
+    max-width: 700px;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+/* Headline */
+
+.hero-content h1 {
+    font-family: var(--font-primary);
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
+    letter-spacing: 0.06em;
+    margin-bottom: 1.2rem;
+    color: var(--color-white);
+}
+
+/* Subtitle */
+
+.hero-content p {
+    font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+    line-height: 1.6;
+    color: var(--color-gray);
+    margin-bottom: 2.5rem;
+}
+
+/* CTA Button */
+
+.button {
+    display: inline-block;
+    padding: 0.9rem 2.4rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: var(--color-black);
+    background-color: var(--color-gold);
+    border: 1px solid var(--color-gold);
+
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.button:hover {
+    background-color: transparent;
+    color: var(--color-gold);
+}
+
+/* =========================
+   About Styles
+========================= */
+
+.about {
+    width: 100%;
+    padding: 6rem 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--color-black);
+}
+
+/* Container */
+
+.about-content {
+    width: 90%;
+    max-width: var(--container-width);
+
+    display: grid;
+    grid-template-columns: 60% 40%;
+    column-gap: 3rem;
+
+    align-items: center;
+
+    border: 1px solid rgba(194, 164, 93, 0.25);
+    border-radius: 16px;
+
+    padding: 3rem;
+}
+
+/* Text area */
+
+.about-text h2 {
+    font-size: clamp(1.6rem, 3vw, 2.3rem);
+
+    font-family: var(--font-primary);
+    font-size: clamp(1.8rem, 3vw, 2.3rem);
+    letter-spacing: 0.05em;
+
+    margin-bottom: 1.2rem;
+    color: var(--color-white);
+}
+
+.about-text p {
+    font-size: clamp(0.9rem, 1.8vw, 0.95rem);
+    line-height: 1.7;
+    color: var(--color-gray);
+
+    max-width: 520px;
+}
+
+.about-text p + p {
+    margin-top: 1rem;
+}
+
+/* Image area */
+
+.about-image {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-right: 3rem;
+}
+
+.about-image img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+
+    border-radius: 12px;
+    filter: grayscale(100%) contrast(1.05);
+}
+
+/* =========================
+   Services
+   ========================= */
+
+.services {
+    padding: 6rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services-content {
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Header */
+.services-content header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.services-content header h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.75rem;
+}
+
+.services-content header p {
+    max-width: 520px;
+    margin: 0 auto;
+    opacity: 0.8;
+}
+
+/* Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; /* espaçamento real entre cards */
+}
+
+/* Card */
+.service-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    padding: 2.5rem 2rem;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.02);
+
+    transition: 
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+/* Hover elegante */
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+/* Card text */
+.service-card h3 {
+    font-size: 1.4rem;
+}
+
+.service-card p {
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+/* =========================
+   Gallery
+   ========================= */
+
+.gallery {
+    padding: 6rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-content {
+    width: 90%;
+    max-width: 1200px;
+
+    padding: 4rem 3rem;
+
+    border-radius: 24px;
+    background: var(--color-black);
+
+    border: 1px solid rgba(194, 164, 93, 0.25);
+}
+
+/* Header */
+.gallery-content header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.gallery-content header h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.75rem;
+}
+
+.gallery-content header p {
+    max-width: 520px;
+    margin: 0 auto;
+    opacity: 0.8;
+}
+
+/* Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+/* Images as cards */
+.gallery-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    border-radius: 16px;
+
+    filter: saturate(0.2) brightness(0.75);
+    transition:
+        filter 0.35s ease,
+        transform 0.35s ease;
+
+    cursor: pointer;
+}
+
+/* Hover effect (desktop) */
+.gallery-grid img:hover {
+    filter: saturate(1) brightness(1);
+    transform: translateY(-4px);
+}
+
+/* =========================
+   Contact
+   ========================= */
+
+.contact {
+    width: 100%;
+    padding: 7rem 0 6rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--color-black);
+}
+
+.contact-content {
+    width: 90%;
+    max-width: 680px;
+
+    text-align: center;
+}
+
+/* Title */
+
+.contact-content h2 {
+    font-family: var(--font-primary);
+    font-size: clamp(2rem, 3.5vw, 2.6rem);
+    letter-spacing: 0.06em;
+
+    margin-bottom: 1.2rem;
+}
+
+/* Description */
+
+.contact-content p {
+    font-size: clamp(0.9rem, 1.8vw, 0.95rem);
+
+    line-height: 1.7;
+    color: var(--color-gray);
+
+    max-width: 520px;
+    margin: 0 auto 3rem;
+}
+
+/* Actions */
+
+.contact-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+/* Secondary text */
+
+.contact-alt {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    width: 100%;
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: thin;
+    color: var(--color-gray);
+    padding-bottom: 1rem;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+
+    /* Header */
+    .header-container {
+        padding: 0 1.5rem;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .nav-list {
+        gap: 1.2rem;
+    }
+
+    .nav-list a {
+        padding: 0.5rem 0.6rem;
+        font-size: 0.75rem;
+        letter-spacing: 0.1em;
+    }
+
+    .nav-cta {
+        display: none;
+    }
+
+    /* About */
+    .about-content {
+        grid-template-columns: 1fr;
+        row-gap: 2.5rem;
+        padding: 2.5rem;
+    }
+
+    .about-text p {
+        max-width: 100%;
+    }
+
+    .about-image {
+        padding-right: 0;
+    }
+
+    .about-image img {
+        max-height: 360px;
+    }
+
+    /* Services */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 2rem;
+    }
+
+    /* Gallery */
+    .gallery-content {
+        padding: 3rem 1.5rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid img {
+        filter: none;
+        transform: none;
+    }
+
+    /* Contact */
+    .contact {
+        padding: 5rem 0;
+    }
+}
