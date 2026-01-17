@@ -6,8 +6,11 @@
   --primary-color: hsl(220, 20%, 97%);
   --secondary-color: hsl(220, 15%, 15%);
 
-  /* Subtitle detail color */
-  --tertiary-color: hsl(220, 12%, 45%);
+  /* For accents, lines, icons */
+  --tertiary-accent: hsl(220, 40%, 65%);
+
+  /* For readable secondary text */
+  --tertiary-text: hsl(220, 15%, 70%);
 }
 
 /* =========================
@@ -32,7 +35,7 @@ body {
   width: 100%;
   min-height: 100vh;
 
-  background-image: url('../images/hero-background.jpg');
+  background-image: url('../images/hero-background.webp');
   background-repeat: repeat;
   background-size: 400px auto;
 
@@ -78,7 +81,7 @@ body {
       hsla(220, 15%, 15%, 0.8),
       hsla(220, 15%, 15%, 1)
     ),
-    url('../images/aboutme-background.jpg');
+    url('../images/aboutme-background.webp');
 
   background-repeat: repeat;
   background-size: 600px auto;
@@ -107,7 +110,7 @@ body {
 }
 
 .aboutme-content span {
-  color: var(--tertiary-color);
+  color: var(--secondary-color);
 }
 
 /* =========================
@@ -269,7 +272,7 @@ body {
 .projects-row {
   width: 100%;
 
-  background-image: url('../images/hero-background.jpg');
+  background-image: url('../images/hero-background.webp');
   background-repeat: repeat;
   background-size: 400px auto;
 
@@ -314,7 +317,7 @@ body {
 }
 
 .projects-header span {
-  color: var(--tertiary-color);
+  color: var(--tertiary-text);
   font-size: 0.95rem;
 }
 
@@ -386,7 +389,7 @@ body {
       hsla(220, 15%, 15%, 1),
       hsla(220, 15%, 15%, 0.85)
     ),
-    url('../images/aboutme-background.jpg');
+    url('../images/aboutme-background.webp');
   ;
 
   background-repeat: repeat;
@@ -444,7 +447,7 @@ body {
 }
 
 .contact-alt a {
-  color: var(--tertiary-color);
+  color: var(--tertiary-accent);
   text-decoration: none;
   font-weight: 500;
 
@@ -539,7 +542,6 @@ body {
   border: none;
   cursor: pointer;
 
-  will-change: transform;
   transition:
     transform 0.15s ease,
     box-shadow 0.15s ease,
