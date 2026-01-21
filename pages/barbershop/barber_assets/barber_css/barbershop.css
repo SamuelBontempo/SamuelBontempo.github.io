@@ -516,17 +516,7 @@ footer {
         font-size: 1.4rem;
     }
 
-    .nav-list {
-        gap: 1.2rem;
-    }
-
-    .nav-list a {
-        padding: 0.5rem 0.6rem;
-        font-size: 0.75rem;
-        letter-spacing: 0.1em;
-    }
-
-    .nav-cta {
+    .nav {
         display: none;
     }
 
