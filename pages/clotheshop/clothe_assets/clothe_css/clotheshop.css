@@ -341,9 +341,8 @@ a {
     height: 100%;
 
     object-fit: cover;
-    object-position: top center;
+    object-position: center;
 
-    aspect-ratio: 16 / 9;
 }
 
 /* =========================
@@ -701,9 +700,22 @@ a {
         justify-self: flex-end;
     }
 
-    .hero-text::after {
-        width: 8%;
+    .hero-content {
+        grid-template-columns: 1fr;
     }
+
+    .a {
+        order: 2;
+    }
+
+    .b {
+        order: 1;
+    }
+
+    .hero-text::after {
+        display: none;
+    }
+    
 
     #more-button {
         display: block;
@@ -715,5 +727,74 @@ a {
 
     .collection-content .product-grid {
         grid-template-columns: 1fr;
+    }
+
+    .newsletter {
+        padding: clamp(2rem, 6vw, 3rem) 1rem;
+        gap: 1.6rem;
+    }
+
+    .newsletter h2 {
+        font-size: clamp(1.4rem, 6vw, 1.8rem);
+    }
+
+    .newsletter form {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .newsletter input,
+    .newsletter button {
+        width: 100%;
+        padding: 0.85rem 1.2rem;
+    }
+
+    .newsletter button {
+        font-size: 0.7rem;
+        letter-spacing: 0.12em;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        max-height: none; /* deixa o conteúdo respirar */
+    }
+
+    /* imagem vem primeiro */
+    .hero-image {
+        order: 1;
+        max-height: 60vh;
+    }
+
+    .hero-image img {
+        object-position: center top;
+    }
+
+    /* texto vem depois */
+    .hero-text {
+        order: 2;
+
+        padding: clamp(1.8rem, 5vw, 2.6rem);
+        text-align: left;
+    }
+
+    .hero-text h1 {
+        max-width: 100%;
+        font-size: clamp(1.6rem, 6vw, 2.2rem);
+        line-height: 1.15;
+    }
+
+    .hero-text p {
+        max-width: 100%;
+        font-size: 1rem;
+    }
+
+    .hero-text::after {
+        display: none;
+    }
+
+    .hero-text .btn-primary {
+        align-self: flex-start;
     }
 }
