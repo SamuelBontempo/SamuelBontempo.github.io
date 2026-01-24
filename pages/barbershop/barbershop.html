@@ -14,7 +14,7 @@
   <meta property="og:title" content="Barber Shop Website">
   <meta property="og:description" content="A modern barber shop website project for portfolio.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https//samuelbontempo.github.io">
+  <meta property="og:url" content="https://samuelbontempo.github.io">
 
   <link rel="stylesheet" href="./barber_assets/barber_css/barbershop.css">
   <link rel="stylesheet" href="../../assets/css/global.css">
@@ -23,7 +23,7 @@
 <body>
   <header class="header">
     <div class="header-container">
-      <a href="#" class="logo">Barber<span>Shop</span></a>
+      <a href="#hero" class="logo">Barber<span>Shop</span></a>
 
       <nav class="nav">
         <ul class="nav-list">
@@ -33,16 +33,23 @@
           <li><a href="#contact" class="nav-cta">Contact</a></li>
         </ul>
       </nav>
+
+      <!-- Mobile Menu Toggle (adicionar JS depois) -->
+      <button class="menu-toggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
   <main>
     <!-- Hero -->
-    <section class="hero">
+    <section class="hero" id="hero">
       <div class="hero-content">
         <h1>Modern Haircuts & Grooming</h1>
         <p>Clean style, sharp cuts, and professional grooming.</p>
-        <a href="../../index.html" class="button">Back to Portfólio</a>
+        <a href="../../index.html" class="button">Back to Portfolio</a>
       </div>
     </section>
 
@@ -64,7 +71,9 @@
         <div class="about-image">
           <img
             src="./barber_assets/barber_images/about.webp"
-            alt="Barber shop interior"
+            alt="Barber shop interior with vintage chairs and mirrors"
+            width="400"
+            height="420"
             loading="lazy"
           >
         </div>
@@ -83,19 +92,19 @@
           <article class="service-card">
             <h3>Haircut</h3>
             <p>Modern and classic haircuts with clean finishing.</p>
-            <span>For only: $9.90</span>
+            <span class="price">$9.90</span>
           </article>
 
           <article class="service-card">
             <h3>Beard Trim</h3>
             <p>Precision beard shaping and grooming.</p>
-            <span>For only: $6.90</span>
+            <span class="price">$6.90</span>
           </article>
 
           <article class="service-card">
             <h3>Hair & Beard</h3>
             <p>Complete grooming experience in one session.</p>
-            <span>For only: $15.90</span>
+            <span class="price">$15.90</span>
           </article>
         </div>
       </div>
@@ -110,10 +119,34 @@
         </header>
 
         <div class="gallery-grid">
-          <img src="./barber_assets/barber_images/cut_one.webp" alt="Haircut style example" loading="lazy">
-          <img src="./barber_assets/barber_images/cut_two.webp" alt="Fade haircut example" loading="lazy">
-          <img src="./barber_assets/barber_images/cut_three.webp" alt="Beard grooming example" loading="lazy">
-          <img src="./barber_assets/barber_images/cut_four.webp" alt="Modern haircut example" loading="lazy">
+          <img 
+            src="./barber_assets/barber_images/cut_one.webp" 
+            alt="Modern fade haircut example" 
+            width="280" 
+            height="280"
+            loading="lazy"
+          >
+          <img 
+            src="./barber_assets/barber_images/cut_two.webp" 
+            alt="Classic pompadour haircut" 
+            width="280" 
+            height="280"
+            loading="lazy"
+          >
+          <img 
+            src="./barber_assets/barber_images/cut_three.webp" 
+            alt="Professional beard trim and shaping" 
+            width="280" 
+            height="280"
+            loading="lazy"
+          >
+          <img 
+            src="./barber_assets/barber_images/cut_four.webp" 
+            alt="Contemporary undercut style" 
+            width="280" 
+            height="280"
+            loading="lazy"
+          >
         </div>
       </div>
     </section>
@@ -125,7 +158,7 @@
         <p>This is a conceptual contact section for portfolio purposes.</p>
 
         <div class="contact-actions">
-          <a href="../../index.html" class="button">Back to Portfólio</a>
+          <a href="../../index.html" class="button">Back to Portfolio</a>
           <span class="contact-alt">or connect via social platforms</span>
         </div>
       </div>
@@ -133,8 +166,7 @@
   </main>
 
   <footer class="footer">
-    <p>© 2026 Barber Shop — Portfolio Project</p>
+    <p>© 2026 Barber Shop — Portfolio Project by <a href="../../index.html">Samuel Bontempo</a></p>
   </footer>
 </body>
 </html>
-
